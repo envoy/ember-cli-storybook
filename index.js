@@ -63,6 +63,15 @@ module.exports = {
       return;
     }
 
+    if (
+      process.env.EMBER_ENV === "development" ||
+      process.env.INVOKED_STORYBOOK
+    ) {
+      // noop, continue
+    } else {
+      return;
+    }
+
     const { name } = this.app;
     const { storybook={} } = this.app.project.pkg;
     const { ignoreTestFiles=true } = storybook;
