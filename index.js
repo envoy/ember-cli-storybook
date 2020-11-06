@@ -63,7 +63,7 @@ module.exports = {
       return;
     }
 
-    if (this.app.env === "development" && process.env.STORYBOOK) {
+    if (process.env.STORYBOOK) {
       // noop, continue
     } else {
       return;
