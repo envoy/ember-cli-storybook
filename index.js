@@ -63,9 +63,7 @@ module.exports = {
       return;
     }
 
-    if (process.env.STORYBOOK) {
-      // noop, continue
-    } else {
+    if (!process.env.STORYBOOK) {
       return;
     }
 
